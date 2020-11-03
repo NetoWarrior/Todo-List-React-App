@@ -1,0 +1,309 @@
+body{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+
+}
+
+.blue-background{
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-color:rgb(70, 70, 128);
+}
+
+.container{
+    margin: 10rem auto;
+    width: 35%;
+    
+    padding: 10px;
+    text-align: center;
+}
+
+.container h1{
+    font-size:3rem;
+    color:white;
+    padding-bottom: 4rem;
+}
+.form-group{
+    margin-top: 2rem;
+}
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin:10rem auto;
+  }
+.custom-field input {
+    border: 1px solid white;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    padding: 12px;
+    width: 75%;
+    outline: none;
+    font-size: 14px;
+    color:white;
+}
+.custom-field .placeholder {
+    position: absolute;
+    left: 9.5rem;
+    /* margin:0 auto; */
+    padding:0 0.5rem;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    background-color:rgb(70, 70, 128);
+}
+
+.flex-container{
+    display:flex;
+}
+
+.check-box{
+    position: relative;
+    padding:2rem;
+    text-align: left;
+    color:White;
+    margin-left:1rem;
+    width:50%;
+}
+
+.forgot-password{
+    position: relative;
+    width:50%;
+    text-align: right;
+    color:white;
+    padding:2rem 2.5rem;
+
+}
+.forgot-password a{
+    color:white;
+    text-decoration: none;
+}
+
+.btn-login{
+    padding:0.8rem 4rem;
+    background-color:white;
+    color:rgb(70, 70, 128);
+    border: none;
+    font-size: 1rem;
+    font-weight:800;
+    
+}
+
+.navbar{
+    padding: 2rem 2rem;
+    display: flex;
+    background-attachment: fixed;
+    background-color:rgb(70, 70, 128); 
+}
+
+.navbar img{
+    right: 2rem;
+    height:5rem;
+    width:5rem;
+    border-radius: 6rem;
+}
+
+.navbar h1{
+    width:50%;
+    color: white;
+    padding-left: 2rem;
+}
+.profile{
+    text-align: right;
+    padding-right: 2rem;
+    width:50%;
+}
+
+.task-container{
+    padding:3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.taskCard{
+    padding:2rem;
+    position: relative;
+    margin-left:2rem;
+    margin-top:2rem;
+    border:1px solid rgb(70, 70, 128); 
+    width:30%;
+    height:100%;
+}
+.taskCard h1 {
+    font-size:2rem;
+
+}
+
+.taskCard .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    position: relative;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    margin-left:0;
+    cursor: pointer;
+    font-size: 1rem;
+    width:35%;
+    
+  }
+  
+  /* Hide the browser's default checkbox */
+  .taskCard .container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    padding-left: 2rem;
+  }
+  
+  /* Create a custom checkbox */
+  .taskCard .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgb(70, 70, 128);
+    background:none;
+    border-radius: 15px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .taskCard .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .taskCard .container input:checked ~ .checkmark {
+    background-color:rgb(70, 70, 128);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .taskCard .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .taskCard .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .taskCard .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+.modal-new-task{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background-color:#FFF;
+    padding:50px;
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+}
+
+.modal-new-list{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background-color:#FFF;
+    padding:50px;
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    width:20rem;
+}
+.modal-new-list .close-btn{
+    text-align: right;
+    width: 100%;
+}
+.modal-new-list input{
+    width:75%;
+    padding:10px;
+    border:none;
+    background-color: rgb(243, 243, 243);
+
+}
+
+.modal-new-list .add-list-btn{
+    
+    top: 0.3rem;
+    left: 1rem;
+
+    color:rgb(70, 70, 128);
+    position:relative;
+    font-size: 1.5rem;
+    background:none;
+    border:none;
+    outline:none;
+    cursor: pointer;
+
+}
+.close-btn{
+    font-size: 2rem;
+    background:none;
+    border:none;
+    text-align:right;
+    outline: none;
+    cursor:pointer;
+}
+
+.overlay-task{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+.modal-new-task input{
+    padding:1rem;
+    margin:1rem auto;
+    width:75%
+}
+
+.add-item{
+    background:none;
+    border:1px solid rgb(70, 70, 128);
+    padding:1rem 2rem;
+}
+
+.add-list-btn{
+    bottom: 2rem;
+    right:2rem;
+    position:fixed;
+    font-size: 3rem;
+    background:none;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    color:rgb(70, 70, 128);
+}
+
+
+
