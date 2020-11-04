@@ -12,3 +12,5 @@ export const  newTaskList = (listTitle) => {
         listTitle
     }
 }
+
+// export const completeTask = (taskList,)
